@@ -1,0 +1,205 @@
+/* Color Pallate
+    Orange - #EB8921
+    Orange Hover - #d77813
+*/
+/**************************************************************/
+/*                    BASIC SETUP                           */
+/**************************************************************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    background-color: #fff; /* setting bacckground. By default while and fff also white. So setting ff is not required */
+    color:#555;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Lato', 'Arial', sans-serif;  /** If google font download is restricted */
+    text-rendering: optimizeLegibility; /* text-rendering CSS property provides information to rendering engine about what to optimize for when rendering text. Refer - https://css-tricks.com/almanac/properties/t/text-rendering/ */
+}
+
+/**************************************************************/
+/*               REUSABLE COMPONENTS                         */
+/**************************************************************/
+
+.row{  /*** To align the section center **/
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.box{
+    padding: 1px;
+}
+section {
+    padding: 80px 0;
+}
+header {
+    height: 100vh;/*view port height. Fit into browser window view */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(/resources/img/hero.jpg);
+    background-size: cover;/* contain will makesure backgroud image fully visible, but it may render multiple times if resolution not matching exactly with continer. Cover make sure it fits into container by streching/cutting images*/
+    background-position: center;
+}
+
+/**** Header Styles ****/
+
+h1,h2,h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+     
+}
+
+h1{
+    margin-top: 0;
+    font-size: 240%;/*in httml tag font size is set as 20px. so 300% of 20px is 60px. For responsive model try  to use % */   
+    color: #fff; 
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+
+}
+
+h2{
+    font-size: 180%;
+    text-align: center;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+   
+}
+
+h2::after{ /*The ::after selector inserts something after the content of each selected element(s).*/
+    content: " ";
+    display: block;
+    height: 2px;
+    background-color: #EB8921;
+    width: 120px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+h3{
+   font-size: 110%; 
+    margin-bottom: 15px;
+}
+
+/*** Button Styles *****/
+
+.btn{
+    display: inline-block;/*bottom & top margin lines are respected*/
+    padding:10px 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    border-radius: 200px;
+    border: 1px solid #EB8921;
+    transition: background-color 0.3s, border 0.3s,color 0.3s;
+}
+.btn-full:link,
+.btn-full:visited{
+    background-color: #EB8921;
+    margin-right: 15px;
+}
+.btn-full:hover,
+.btn-full:active{
+    background-color: #d77813;
+    border: 1px solid #d77813;
+}
+.btn-ghost:link,
+.btn-ghost:visited{
+    color: #EB8921;
+}
+.btn-ghost:hover,
+.btn-ghost:active{
+    border: 1px solid #d77813;
+     background-color: #d77813;
+    color: #fff;
+}
+
+/******Para****/
+.long-copy p{
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.box p{
+    font-size: 90%;
+    line-height: 145%;
+    
+}
+
+/**** Icon *****/
+.icon-big{
+    font-size: 350%;
+    display: block; /* requires to give margins */
+    margin-bottom: 10px;
+    color: #EB8921;
+}
+
+/**************************************************************/
+/*               HEADER SECTION                         */
+/**************************************************************/
+
+.hero-text-box {
+    position: absolute;/*absolute sets position from its parent tag. Relative sets position based on its current postion. So in relative element might get overflow outisde its container */
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 1140px;/*to align in one row */
+}
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav {
+    float: right;
+    margin-top: 55px;
+    list-style: none;
+
+}
+
+.main-nav li{
+    display: inline-block;/* to arrange elemnets in one line with blocks*/
+    margin-left: 40px;
+
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+    text-decoration: none;
+    color: #fff;
+    font-size: 90%;
+    text-transform: uppercase;
+    padding: 8px 0px;
+    transition:  border-bottom 0.3s;
+}
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid #EB8921;
+}
+
+
+/**************************************************************/
+/*               MEALS SECTION                         */
+/**************************************************************/
+.meals-showcase {
+    width: 100%; /* requirement*/
+}
+.meals-showase ui{
+    list-style: none;
+}
+.meals-showase li{
+    display: inline-block;
+    float: left;
+    width: 25%;
+}
+.meal-photo{ /* not required as by default it is 100% */
+   margin: 0; 
+   width: 100%;
+}
+.meal-photo img{
+    width: 100%;
+    height: auto;
+}
